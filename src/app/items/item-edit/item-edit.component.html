@@ -1,0 +1,23 @@
+<div class="container" *ngIf="readyView">
+
+  <div class="row" *ngIf="item">
+      <div class="col-12">
+        <h1>Editar artículo</h1>
+
+        <app-item-add-edit [item]="item" (formSubmitEvent)="formSubmitEvent($event)"></app-item-add-edit>
+      </div>
+  </div>
+
+  <div class="row" *ngIf="hasNoItem">
+      <div class="col-12">
+        <h1>No se puede encontrar el artículo</h1>
+
+        <p class="alert alert-danger" role="alert">
+          <strong>Error!</strong>
+          <br>
+          ¡Necesito comida!
+        </p>
+      </div>
+  </div>
+  
+</div>

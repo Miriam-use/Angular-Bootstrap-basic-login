@@ -1,0 +1,34 @@
+<!-- Header navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <div class="container">
+    <a class="navbar-brand">Practica de Angula con Boootstrap</a>
+    <button (click)="toggleNav()" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive" [ngClass]="{'show': navToggle}">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/dashboard">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/items">Articulos</a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link" (click)="logout()">Logout</a>
+            </li>
+            <li></li>
+            <li>
+              <div class="container-btn-mode">
+                <div id="id-sun" class="btn-mode sun active">
+                   <i class="fas fa-sun"></i>
+                </div>
+                <div id="id-moon" class="btn-mode moon">
+                   <i class="fas fa-moon"></i>
+                </div>
+             </div>
+            </li>
+          </ul>    
+    </div>
+  </div>
+</nav>
